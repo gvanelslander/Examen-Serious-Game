@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="SeriousGame.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Images/ico" href="Images/e593c562359c3c2e42a22b808d3383e7.ico">
+    <title>SeriousGame</title>
+</head>
+<body>
+    <div id="PartieGauche">
+        <h1>Les bases de l'algorithmie</h1>
+        <!-- Les bases + les variables -->
+        <div class="Tuto" data-page-number="1">
+            <h3>Pour commencer les bases de l'algorithmie nous allons voir différentes choses et ensuite nous les mettrons en pratique.
+                Nous allons voir les variables, la structure et l'écriture et lecture, les conditions et les boucles. </h3>
+            <h3>Pour commencer, nous allons voir les variables. Ils en existent 5 types :</h3>
+            <h3>-Les entiers (on les définits en tant que ENTIER): comme le nom l'indique c'est un entier donc un nombre positif ou négatif qui ne possède pas de virgule.</h3>
+            <h3>-Les réels (on les définits en tant que REEL): contrairement aux entiers  les réels sont des nombres possèdant une virgule.</h3>
+            <h3>-Les caractères (on les définits en tant que CAR): ils sont comme leur nom l'indique un seul caractère qui peut être une lettre ou un symbole.</h3>
+            <h3>-Les chaines (on les définits en tant que CHAINE): les chaines sont composés de plusieurs caractères, cela peut aller de deux à beaucoup plus.</h3>
+            <h3>-Les booleens (on les définits en tant que BOOL): les booléens peuvent être soit vrai soit faux.</h3>
+        </div>
+        <!-- exo variable -->
+        <div class="Tuto" data-page-number="2">
+            <h3>Parmi les propositions suivantes définnissez de quel type de variables il sagit :</h3>
+            <h3>Par exemple 15 est un ENTIER</h3>
+            <h3>A vous</h3>
+            <h3>6 = <input id="input1" class="inputsUPPER"/></h3> 
+            <h3>5,85 = <input id="input2" class="inputsUPPER"/></h3>
+            <h3>c = <input id="input3" class="inputsUPPER"/></h3>
+            <h3>Bonjour = <input id="input4" class="inputsUPPER"/></h3>
+            <button id="Validation1">Vérifier</button>
+        </div>
+        <!-- Structure, Ecrire, lire  -->
+        <div class="Tuto" data-page-number="3">
+            <h3>On va voir comment peut on afficher du texte dans la console et recevoir des informations de l'utilisateur. En même temps nous allons voir la structure</h3>
+            <h3>Pour chaque algorithme il faut définir un but : le but de l'algorithme, une entree : quelque chose que l'utilisateur saisi (il n'y en a pas toujours), et une sortie : ce que l'agorithme renvoie (il n'y en a pas toujours) </h3>
+            <h3>le // sert a commenter son code</h3>
+            <h3>//BUT La somme de deux entiers </h3>
+            <h3>//ENTREE Un entier</h3>
+            <h3>//SORTIE Le total</h3>
+            <h3>Puis il faut initialiser ses variables. Donc avant de commencer son algorithme il faut commencer par metttre le mot clé VAR et puis l'on définit quel variable sera de quels types</h3>
+            <h3>VAR </h3>
+            <h3>a ,b ,c : ENTIER</h3>
+            <h3>Donc ici j'ai dit que les variables a , b et c seront des entiers</h3>
+            <h3>Ensuite, l'on commence son algorithme par un DEBUT pour montrer à quel endroit il commence et terminera toujours par FIN</h3>
+            <h3>Dans cet exemple nous allons demander à l'utilisateur de rentrer un entier et nous allons définir nous même un entier et faire la somme des deux pour obtenir un total et afficher ce total</h3>
+            <h3>Pour dire à l'utilisateur ce qu'il doit faire nous allons utilisé le mot clé ECRIRE "" qui permettra d'afficher quelques choses dans la console. Ensuite pour qu'il puisse rentrer une information nous devrons la LIRE.</h3>
+            <h3>Si nous voulons assignez une valeur a une variable directement nous allons l'écrire : la variable ← ce que l'on lui assigne comme valeur. </h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Veuillez entrer un entier" </h3>
+            <h3>LIRE a</h3>
+            <h3>b ← 12</h3>
+            <h3>c ← a + b</h3>
+            <h3>ECRIRE "Le total est de" + c</h3>
+            <h3>FIN</h3>
+            <h3>Dans le dernier ECRIRE on peut rajouter + c pour indique une variable.</h3>
+        </div>
+        <!-- exo structure, Ecrire, lire -->
+        <div class="Tuto" data-page-number="4">
+            <h3>Passons à un exercice sur ce que nous venons de voir</h3>
+            <h3>//BUT Intervetir deux entiers </h3>
+            <h3>//ENTREE Un entier</h3>
+            <h3>//SORTIE Les entiers qui ont été modifié</h3>
+            <h3>VAR</h3>
+            <h3>a, b, c : <input class="inputsUPPER" id="input5"/></h3>
+            <h3>DEBUT</h3>
+            <h3>a ← 12</h3>
+            <h3><input class="inputsUPPER" id="input6"/> "Veuillez entrer un entier" </h3>
+            <h3>LIRE b</h3>
+            <h3>c ← a</h3>
+            <h3><input class="inputsLOWER" id="input7"/> ← <input class="inputsLOWER" id="input8"/></h3>
+            <h3>b ← <input class="inputsLOWER" id="input9"/></h3>
+            <h3>ECRIRE "L'entier" + a + "est devenu l'entier" + b</h3>
+            <h3>FIN</h3>
+            <button id="Validation2">Vérifier</button>
+        </div>
+        <!-- apprentissage de la condition if -->
+        <div class="Tuto" data-page-number="5">
+            <h3>Après avoir vu la base de la structure, nous allons passer au sujet suivant, les conditions.</h3>
+            <h3>Il existe 2 types de condition différente :</h3>
+            <h3>Le Si Alors est utilisé seulement pour vérifier si une condition est correct ou non.</h3>
+            <h3>Je vais prendre un exemple considérons que nous voulons vérifier si une personne est majeur ou non</h3>
+            <h3>VAR </h3>
+            <h3>monage : ENTIER</h3>
+            <h3>estmajeur : BOOL</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Quel est votre age"</h3>
+            <h3>LIRE monage</h3>
+            <h3>SI monage ≥ 18 ALORS</h3>
+            <h3>estmajeur ← vrai</h3>
+            <h3>ECRIRE "Vous etes majeur"</h3>
+            <h3>FINSI</h3>
+            <h3>FIN</h3>
+            <h3>Donc ici si la personne a 18ans ou plus on rentre dans le si mais si on a moins de 18ans on ne rentre pas dans cette condition. </h3>
+            <h3>Mais au SI on peut rajouter après un SINON qui permettra de dire au personne qui on moins de 18 ans qu'ils sont mineurs.</h3>
+            <h3>VAR </h3>
+            <h3>monage : ENTIER</h3>
+            <h3>estmajeur : BOOL</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Quel est votre age"</h3>
+            <h3>LIRE monage</h3>
+            <h3>SI monage ≥ 18 ALORS</h3>
+            <h3>estmajeur ← vrai</h3>
+            <h3>ECRIRE "Vous etes majeur"</h3>
+            <h3>SINON</h3>
+            <h3>estmajeur ← faux</h3>
+            <h3>ECRIRE "Vous etes mineurs"</h3>
+            <h3>FINSI</h3>
+            <h3>FIN</h3>
+        </div>
+        <!-- exercice de la condition si -->
+        <div class="Tuto" data-page-number="6">
+            <h3>Exercice de la condition SI</h3>
+            <h3>//BUT Calcul de la moyenne, voir si l'élève a réussi</h3>
+            <h3>//ENTREE 3 notes de l'utilisateur sur 20</h3>
+            <h3>//SORTIE si l'utilisateur à réussi son année</h3>
+            <h3>VAR</h3>
+            <h3>areussi : BOOL</h3>
+            <h3>moyenne, note1, note2, note3 : <input class="inputsUPPER" id="input10"/></h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Veuillez entrer votre première note</h3>
+            <h3><input class="inputsUPPER" id="input11"/> note1</h3>
+            <h3>ECRIRE "Veuillez entrer votre deuxième note</h3>
+            <h3>LIRE note2</h3>
+            <h3>ECRIRE "Veuillez entrer votre troisième note</h3>
+            <h3>LIRE note3</h3>
+            <h3><input class="inputsLOWER" id="input12"/> ← note1 + note2 + note3 </h3>
+            <h3>moyenne ← moyenne / 3</h3>
+            <h3>SI moyenne ≥ 10 <input class="inputsUPPER" id="input13"/></h3>
+            <h3><input class="inputsLOWER" id="input14"/> ← vrai</h3>
+            <h3>SINON</h3>
+            <h3>areussi ← <input class="inputsLOWER" id="input15"/></h3>
+            <h3>FINSI</h3>
+            <h3>SI areussi = vrai ALORS</h3>
+            <h3>ECRIRE "Félicitation vous avez réussi avec une moyenne de" + moyenne</h3>
+            <h3>SINON</h3>
+            <h3>ECRIRE "Malheureusement vous avez raté avec une moyenne de" + moyenne</h3>
+            <h3><input class="inputsUPPER" id="input16"/></h3>
+            <h3>FIN</h3>
+            <button id="Validation3">Vérifier</button>
+        </div>
+        <!-- Explication du CAS PARMI -->
+        <div class="Tuto" data-page-number="7">
+            <h3>Maintenant que vous avez mieux compris le fonctionnement du SI nous allons voir le CAS PARMI</h3>
+            <h3>Le CAS PARMI est utilisé quand il y a plus de deux choix qui s'offre à la personne.</h3>
+            <h3>Je vais vous montrer cela par un exemple si on laisse l'utilisateur choisir une note et qu'en suite en fonction de cette note on définisse que :</h3>
+            <h3>Si elle est supérieur à 18 c'est excellent</h3>
+            <h3>Entre 18 et 16 c'est très bien</h3>
+            <h3>Entre 14 et 16 c'est bien</h3>
+            <h3>Entre 12 et 14 c'est satisfaisant</h3>
+            <h3>Entre 10 et 12 c'est faible</h3>
+            <h3>Et qu'en dessous de 10 c'est raté</h3>
+            <h3>On pourrait faire cet algorithme avec des SI mais cela est plus facile avec un CAS PARMI </h3>
+            <h3>//BUT Définir ce que la note représente</h3>
+            <h3>//ENTREE La note sur 20</h3>
+            <h3>//SORTIE A quoi correspond la note</h3>
+            <h3>VAR</h3>
+            <h3>note : REEL</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Veuillez entrez votre note sur 20"</h3>
+            <h3>LIRE note</h3>
+            <h3>CAS note PARMI</h3>
+            <h3>CAS ≥18:</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Excellent"</h3>
+            <h3>FIN</h3>
+            <h3>CAS ≥16 :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Très bien"</h3>
+            <h3>FIN</h3>
+            <h3>CAS ≥14:</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Bien"</h3>
+            <h3>FIN</h3>
+            <h3>CAS ≥12:</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Satisfaisant"</h3>
+            <h3>FIN</h3>
+            <h3>CAS ≥10:</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Faible"</h3>
+            <h3>FIN</h3>
+            <h3>DEFAUT:</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Raté"</h3>
+            <h3>FIN</h3>
+            <h3>FINCASPARMI</h3>
+            <h3>FIN</h3>
+            <h3>Par exemple ici si la note est de 17, elle ne rentre pas dans le premier cas. La condition du deuxième cas est valide donc elle va lire l'instruction. Et le CAS PARMI va s'arreter la</h3>
+            <h3>Le DEFAUT rentre en compte si aucune des valeurs a été prise en compte et dans cet exemple l'utilisateur a moins que 10</h3>
+        </div>
+        <!-- Exercice CAS PARMI -->
+        <div class="Tuto" data-page-number="8">
+            <h3>Passons a l'exercice du CAS PARMI</h3>
+            <h3>Dans cet exercice vous allez ecrire un algorithme ou l'utilisateur va rentrer une couleur et cela va dire à quel position se trouve cette couleur se trouve dans l'arc en ciel, si elle si trouve</h3>
+            <h3>//BUT Définir à quelle position se trouve la couleur dans l'arc en ciel</h3>
+            <h3>//ENTREE Une couleur</h3>
+            <h3>//SORTIE La position de la couleur</h3>
+            <h3><input class="inputsUPPER" id="input17"/></h3>
+            <h3>couleur : <input class="inputsUPPER" id="input18"/></h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Veuillez entrez une couleur"</h3>
+            <h3>LIRE <input class="inputsLOWER" id="input19"/></h3>
+            <h3>CAS couleur <input class="inputsUPPER" id="input20"/></h3>
+            <h3>CAS 'rouge' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "1"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'orange' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "2"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'jaune' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "3"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'vert' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "4"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'bleu' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "5"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'indigo' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "6"</h3>
+            <h3>FIN</h3>
+            <h3>CAS 'violet' :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "7"</h3>
+            <h3>FIN</h3>
+            <h3><input class="inputsUPPER" id="input21"/> :</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Cette couleur ne fait pas parti de l'arc en ciel"</h3>
+            <h3>FIN</h3>
+            <h3>FINCASPARMI</h3>
+            <h3><input class="inputsUPPER" id="input22"/></h3>
+            <button id="Validation4">Vérifier</button>
+        </div>
+        <!-- Explication boucle POUR -->
+        <div class="Tuto" data-page-number="9">
+            <h3>Passons à notre dernière thématique : les boucles. Il existe plusieurs type de boucle mais nous allons voir les 2 principales :</h3>
+            <h3>La boucle POUR et la boucle TANTQUE</h3>
+            <h3>Commencons par la boucle POUR</h3>
+            <h3>La boucle POUR est une boucle à itérations définies, cela veut dire qu'au moment où l'on appelle la boucle on définit le nombre d'itérations que la boucle va faire.</h3>
+            <h3>Par exemple pour faire la table de multiplication d'un nombre au lieu d'écrire 10 fois l'opération on peut faire une boucle POUR qui fait 10 itérations</h3>
+            <h3>//BUT Une table de multiplication</h3>
+            <h3>//ENTREE Un entier</h3>
+            <h3>//SORTIE La table de multiplication de l'entier qui a été rentré</h3>
+            <h3>VAR</h3>
+            <h3>i, nbr, resultat : ENTIER</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Veuillez entrer un entier"</h3>
+            <h3>LIRE nbr</h3>
+            <h3>POUR i DE 1 A 10 FAIRE</h3>
+            <h3>resultat ← i*nbr</h3>
+            <h3>ECRIRE i + "*" + nbr + "=" + total</h3>
+            <h3>FINPOUR</h3>
+            <h3>FIN</h3>
+            <h3>Ici dans la boucle POUR on définit la variable i à 1 au début de la boucle et à chaque tour de boucle elle va augmenter de 1. Et donc on multiplie i par le nbr, ensuite on l'écrit et on recommence la boucle jusqua i soit égal a 10.</h3>
+        </div>
+        <!-- Exercice boucle POUR -->
+        <div class="Tuto" data-page-number="10">
+            <h3>Exercice de la boucle POUR</h3>
+            <h3>//BUT Calcul de la somme des chiffres de 1 à 100</h3>
+            <h3>//ENTREE rien</h3>
+            <h3>//SORTIE La somme des chiffres de 1 à 100</h3>
+            <h3>VAR</h3>
+            <h3>total, <input class="inputsLOWER" id="input23"/> : ENTIER</h3>
+            <h3><input class="inputsUPPER" id="input24"/></h3>
+            <h3>POUR i <input class="inputsUPPER" id="input25"/> 1 A 100 <input class="inputsUPPER" id="input26"/> </h3>
+            <h3>total ← i + <input class="inputsLOWER" id="input27"/></h3>
+            <h3><input class="inputsUPPER" id="input28"/></h3>
+            <h3>ECRIRE "Le total des chiffres de 1 à 100 =" + total</h3>
+            <button id="Validation5">Vérifier</button>
+        </div>
+        <!-- Explication boucle TANTQUE -->
+        <div class="Tuto" data-page-number="11">
+            <h3>Après avoir vu comment fonctionnait la boucle POUR, nous allons passer à la boucle TANTQUE.</h3>
+            <h3>La boucle TANTQUE fonctionne comme dans la vrai vie :</h3>
+            <h3>TANTQUE je n'ai pas mangé : j'aurai faim, et donc dès que j'ai mangé je n'aurai plus faim.</h3>
+            <h3>La boucle fonctionne de la même manière. Contrairement à la boucle POUR où l'on sait jusque où l'on va, la boucle TANTQUE n'est pas définit directement.</h3>
+            <h3>Elle peut être très utile pour faire des menus et dire TANTQUE je n'ai pas appuyé sur la croix je reste dans le menu ou dans les jeux vidéos elle peut fonctionner dans le fait que TANTQUE le joueur n'est pas mort, le jeu continue.</h3>
+            <h3>Un exemple concret ici on va vérifier si l'utilisateur ne rentre pas des données que l'on ne veut pas</h3>
+            <h3>//BUT Vérifier que l'utilisateur rentre la bonne données</h3>
+            <h3>//ENTREE Un entier</h3>
+            <h3>//SORTIE rien</h3>
+            <h3>VAR</h3>
+            <h3>nbr : ENTIER</h3>
+            <h3>DEBUT</h3>
+            <h3>ECRIRE "Entrez un entier entre 1 et 3</h3>
+            <h3>TANTQUE nbr ≥ 3 OU nbr ≤ 1 FAIRE</h3>
+            <h3>LIRE nbr</h3>
+            <h3>SI nbr ≥ 3 OU nbr ≤ 1 ALORS </h3>
+            <h3>ECRIRE "Saisie erronée. Recommencez"</h3>
+            <h3>FINSI</h3>
+            <h3>FINTANTQUE</h3>
+            <h3>FIN</h3>
+            <h3>Dans cet algorithme on regarde que la valeur de nbr soit bien entre 1 et 3 et TANTQUE ce n'est pas le cas on demande à l'utilisateur de rentrer un nouvel entier.</h3>
+        </div>
+        <!-- Exercice boucle TANTQUE -->
+        <div class="Tuto" data-page-number="12">
+            <h3>Place à l'exercice sur la boucle TANTQUE</h3>
+            <h3>On va faire un système de lotto ou l'utilisateur choisis un entier entre 1 et 10 et une fonction d'aléatoire va faire en sorte qu'on ait un entier entre 1 et 10. Tantque le joueur n'a pas gagné on recommence la partie.</h3>
+            <h3>//BUT Faire un lotto</h3>
+            <h3>//ENTREE Un entier entre 1 et 10</h3>
+            <h3>//SORTIE Si le joueur gagne ou perd la partie actuel</h3>
+            <h3>VAR</h3>
+            <h3>nbr, nbralea, essaie : ENTIER</h3>
+            <h3>win : <input class="inputsUPPER" id="input29"/></h3>
+            <h3>DEBUT</h3>
+            <h3>win ← faux</h3>
+            <h3>essaie ← 0</h3>
+            <h3><input class="inputsUPPER" id="input30"/> <input class="inputsLOWER" id="input31"/> = faux FAIRE</h3>
+            <h3>ECRIRE "Veuillez sélectionner un entier entre 1 et 10"</h3>
+            <h3>LIRE nbr</h3>
+            <h3>nbralea ← ALEA(1,10)</h3>
+            <h3><input class="inputsUPPER" id="input32"/> nbr = nbralea <input class="inputsUPPER" id="input33"/></h3>
+            <h3>win ← <input class="inputsLOWER" id="input34"/></h3>
+            <h3><input class="inputsUPPER" id="input35"/></h3>
+            <h3>ECRIRE "Raté"</h3>
+            <h3>essaie ← essaie + 1</h3>
+            <h3>FINSI</h3>
+            <h3><input class="inputsUPPER" id="input36"/></h3>
+            <h3>ECRIRE "Vous avez réussi en " + essaie + "tentatives"</h3>
+            <h3>FIN</h3>
+            <button id="Validation6">Vérifier</button>
+        </div>
+        <button id="PreviousPage"> ← </button>
+        <button id="NextPage"> → </button>
+        
+    </div>
+    <div id="PartieDroite">
+        <canvas id="First">
+
+        </canvas>
+    </div>
+</body>
+<script src="SeriousGame.js"></script>
