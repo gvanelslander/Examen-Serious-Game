@@ -18,11 +18,14 @@ h3{
 
 #PartieDroite {
     grid-column: 2;
-    /* background-color: yellow; */
+    background-color: yellow;
     justify-items: center;
     align-items: center;
-    /* width: 500px;
-    height: 500px; */
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    right: 100px;
+    top: 100px;
 }
 
 .inputsUPPER {
@@ -31,4 +34,8 @@ h3{
 
 .inputsLOWER{
     text-transform: lowercase;
+}
+
+.planquer{
+    display: none;
 }

@@ -330,11 +330,78 @@
             <h3>FIN</h3>
             <button id="Validation6">Vérifier</button>
         </div>
+        <!-- Commencement du snake, creation de la map -->
+        <div class="Tuto" data-page-number="13">
+            <h3>Maintenant que vous avez appris les bases, vous allez réaliser un snake.</h3>
+            <h3>Je vais vous guider étapes par étapes</h3>
+            <h3>Première étape nous allons afficher un terrain de jeu qui sera la carte.</h3>
+            <h3>Pour cela nous allons faire un tableau cela nous permettra de créer une carte sans soucis et pour évitez de la creer manuellement. Pour creer cette carte nous devons a chaque position rajouter un élément</h3>
+            <h3>Nous allons utilisé des constantes qui sont comme des variables mais qui ne peuvent être modifié.</h3>
+            <h3>Commencons l'algorithme:</h3>
+            <h3>//BUT Créer une carte </h3>
+            <h3>//ENTREE rien</h3>
+            <h3>//SORTIE Création de la carte</h3>
+            <h3>CONST</h3>
+            <h3>HAUTEUR : 500</h3>
+            <h3>LARGEUR : 500</h3>
+            <h3>VAR</h3>
+            <h3>map[][] : TABLEAU de CAR</h3>
+            <h3>i, j : <input class="inputsUPPER" id="input37"/></h3>
+            <h3>DEBUT</h3>
+            <h3><input class="inputsUPPER" id="input38"/> i DE 0 <input class="inputsUPPER" id="input39"/> HAUTEUR FAIRE</h3>
+            <h3>POUR j <input class="inputsUPPER" id="input40"/> 0 A LARGEUR <input class="inputsUPPER" id="input41"/></h3>
+            <h3><input class="inputsLOWER" id="input42"/>[i][j] ← " " </h3>
+            <h3>FINPOUR</h3>
+            <h3><input class="inputsUPPER" id="input43"/></h3>
+            <h3>FIN</h3>
+            <button id="Validation7">Vérifier</button>
+        </div>
+        <!-- Affichage de la map -->
+        <div div class="Tuto" data-page-number="14">
+            <h3>Maintenant que nous avons créer la carte, affichons la!</h3>
+            <h3>Nous utiliserons le ECRIREALALIGNE pour passer a la ligne suivant car sinon durant l'affichage la carte s'affichera en une ligne.</h3>
+            <h3>Je ferai en sorte que l'affichage de la carte se fasse en jaune</h3>
+            <h3>//BUT Afficher la carte</h3>
+            <h3>//ENTREE rien</h3>
+            <h3>//SORTIE La carte affiché</h3>
+            <h3>CONST</h3>
+            <h3>HAUTEUR : 500</h3>
+            <h3>LARGEUR : 500</h3>
+            <h3>VAR</h3>
+            <h3>i,j : ENTIER</h3>
+            <h3>map : <input class="inputsUPPER" id="input44"/> de CAR</h3>
+            <h3>DEBUT</h3>
+            <h3><input class="inputsUPPER" id="input45"/> i <input class="inputsUPPER" id="input46"/> 0 <input class="inputsUPPER" id="input47"/> HAUTEUR <input class="inputsUPPER" id="input48"/> </h3>
+            <h3><input class="inputsUPPER" id="input49"/> j <input class="inputsUPPER" id="input50"/> 0 <input class="inputsUPPER" id="input51"/> LARGEUR <input class="inputsUPPER" id="input52"/> </h3>
+            <h3>ECRIRE map[i][j]</h3>
+            <h3>FINPOUR</h3>
+            <h3><input class="inputsUPPER" id="input53"/></h3>
+            <h3>FINPOUR</h3>
+            <h3>FIN</h3>
+            <button id="Validation8">Vérifier</button>
+        </div>
+        <!-- Creation du serpent -->
+        <div div class="Tuto" data-page-number="15">
+            <h3>Maintenant que notre carte est affiché on va y ajouter notre serpent. Pour cela on va creer une classe joueur. Une classe permet de définir des attributs comme par exemple son nom, son prénom. </h3>
+            <h3>Ici ce qui nous intéresse est de connaitre la position de chaque partie de notre serpent. On va initialiser notre serpent avec deux partie. Chaque partie sera stocké dans un TABLEAU, il y aura sa position x et sa position y. </h3>
+            <h3>Ensuite on devra intégrer notre serpent à notre carte mais avec l'agoritme que l'on a fait juste avant il suffit de l'integrer dans map</h3>
+            <h3>//BUT Creation du serpent et integration du serpent dans la carte</h3>
+            <h3>//ENTREE rien</h3>
+            <h3>//SORTIE rien</h3>
+            <h3>VAR</h3>
+            <h3>player ← parts : TABLEAU de ENTIER</h3>
+            <h3>nbr_parts, i : ENTIER</h3>
+            <h3>DEBUT</h3>
+            <h3>parts[{X: 1, Y: 0}, {X: 0, Y: 0}]</h3>
+            <h3>nbr_parts ← player.parts.LONGUEUR</h3>
+            <h3>POUR i DE 0 A <input class="inputsLOWER" id="input54"/> FAIRE </h3>
+            <h3>player.parts[i].X</h3>
+        </div>
         <button id="PreviousPage"> ← </button>
         <button id="NextPage"> → </button>
         
     </div>
-    <div id="PartieDroite">
+    <div id="PartieDroite" class="planquer">
         <canvas id="First">
 
         </canvas>
