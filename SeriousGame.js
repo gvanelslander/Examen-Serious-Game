@@ -1,6 +1,6 @@
 var can = document.getElementById("First");
 //Changement de page
-const levelmax = 25;
+const levelmax = 22;
 let curentlevel = 1;
 let succeslevel = 1;
 let previous = document.querySelector("#PreviousPage");
@@ -49,7 +49,27 @@ function changePage() {
 
     })
 }
+function verifinputupper(input, string, total){
+    if (input.value.toUpperCase() == string) {
+        total = total + 1;
+        input.style.background = "green";
+    }
+    else {
+        input.style.background = "red";
+    }
+    return total;
+}
 
+function verifinputlower(input, string, total){
+    if (input.value.toLowerCase() == string) {
+        total = total + 1;
+        input.style.background = "green";
+    }
+    else {
+        input.style.background = "red";
+    }
+    return total;
+}
 //Vérification level 1
 let verif = document.querySelector("#Validation1");
 let input1 = document.querySelector("#input1");
@@ -61,36 +81,10 @@ let total = 0;
 
 verif.addEventListener("click", () => {
 
-    if (input1.value.toUpperCase() == "ENTIER") {
-        total = total + 1;
-        input1.style.background = "green";
-    }
-    else {
-        input1.style.background = "red";
-    }
-
-    if (input2.value.toUpperCase() == "REEL") {
-        total = total + 1;
-        input2.style.background = "green";
-    }
-    else {
-        input2.style.background = "red";
-    }
-    if (input3.value.toUpperCase() == "CAR") {
-        total = total + 1;
-        input3.style.background = "green";
-    }
-    else {
-
-        input3.style.background = "red";
-    }
-    if (input4.value.toUpperCase() == "CHAINE") {
-        total = total + 1;
-        input4.style.background = "green";
-    }
-    else {
-        input4.style.background = "red";
-    }
+    total = verifinputupper(input1, "ENTIER", total);
+    total = verifinputupper(input2, "REEL", total);
+    total = verifinputupper(input3, "CAR", total);
+    total = verifinputupper(input4, "CHAINE", total);
 
     if (total != 4) {
         total = 0;
@@ -127,46 +121,12 @@ let input9 = document.querySelector("#input9");
 
 verif2.addEventListener("click", () => {
     total = 0;
-    if (input5.value.toUpperCase() == "ENTIER") {
-        total = total + 1;
-        input5.style.background = "green";
-    }
-    else {
-        input5.style.background = "red";
-    }
+    total = verifinputupper(input5, "ENTIER", total);
+    total = verifinputupper(input6, "ECRIRE", total);
+    total = verifinputlower(input7, "a", total);
+    total = verifinputlower(input8, "b", total);
+    total = verifinputlower(input9, "c", total);
 
-    if (input6.value.toUpperCase() == "ECRIRE") {
-        total = total + 1;
-        input6.style.background = "green";
-    }
-    else {
-        input6.style.background = "red";
-    }
-
-    if (input7.value.toLowerCase() == "a") {
-        total = total + 1;
-        input7.style.background = "green";
-    }
-    else {
-        input7.style.background = "red";
-    }
-
-    if (input8.value.toLowerCase() == "b") {
-        total = total + 1;
-        input8.style.background = "green";
-    }
-    else {
-
-        input8.style.background = "red";
-    }
-
-    if (input9.value.toLowerCase() == "c") {
-        total = total + 1;
-        input9.style.background = "green";
-    }
-    else {
-        input9.style.background = "red";
-    }
 
     if (total != 5) {
         total = 0;
@@ -189,65 +149,15 @@ let input15 = document.querySelector("#input15");
 let input16 = document.querySelector("#input16");
 
 verif3.addEventListener("click", () => {
-    console.log("je rentre");
     total = 0;
-
-    if (input10.value.toUpperCase() == "REEL") {
-        total = total + 1;
-        input10.style.background = "green";
-    }
-    else {
-        input10.style.background = "red";
-    }
-
-    if (input11.value.toUpperCase() == "LIRE") {
-        total = total + 1;
-        input11.style.background = "green";
-    }
-    else {
-        input11.style.background = "red";
-    }
-
-    if (input12.value.toLowerCase() == "moyenne") {
-        total = total + 1;
-        input12.style.background = "green";
-    }
-    else {
-        input12.style.background = "red";
-    }
-
-    if (input13.value.toUpperCase() == "ALORS") {
-        total = total + 1;
-        input13.style.background = "green";
-    }
-    else {
-
-        input13.style.background = "red";
-    }
-
-    if (input14.value.toLowerCase() == "areussi") {
-        total = total + 1;
-        input14.style.background = "green";
-    }
-    else {
-        input14.style.background = "red";
-    }
-
-    if (input15.value.toLowerCase() == "faux") {
-        total = total + 1;
-        input15.style.background = "green";
-    }
-    else {
-        input15.style.background = "red";
-    }
-
-    if (input16.value.toUpperCase() == "FINSI") {
-        total = total + 1;
-        input16.style.background = "green";
-    }
-    else {
-        input16.style.background = "red";
-    }
+    total = verifinputupper(input10, "REEL", total);
+    total = verifinputupper(input11, "LIRE", total);
+    total = verifinputlower(input12, "moyenne", total);
+    total = verifinputupper(input13, "ALORS", total);
+    total = verifinputlower(input14, "areussi", total);
+    total = verifinputlower(input15, "faux", total);
+    total = verifinputupper(input16, "FINSI", total);
+    
 
     if (total != 7) {
         total = 0;
@@ -270,55 +180,12 @@ let input22 = document.querySelector("#input22");
 
 verif4.addEventListener("click", () => {
     total = 0;
-
-    if (input17.value.toUpperCase() == "VAR") {
-        total = total + 1;
-        input17.style.background = "green";
-    }
-    else {
-        input17.style.background = "red";
-    }
-
-    if (input18.value.toUpperCase() == "CHAINE") {
-        total = total + 1;
-        input18.style.background = "green";
-    }
-    else {
-        input18.style.background = "red";
-    }
-
-    if (input19.value.toLowerCase() == "couleur") {
-        total = total + 1;
-        input19.style.background = "green";
-    }
-    else {
-        input19.style.background = "red";
-    }
-
-    if (input20.value.toUpperCase() == "PARMI") {
-        total = total + 1;
-        input20.style.background = "green";
-    }
-    else {
-
-        input20.style.background = "red";
-    }
-
-    if (input21.value.toUpperCase() == "DEFAUT") {
-        total = total + 1;
-        input21.style.background = "green";
-    }
-    else {
-        input21.style.background = "red";
-    }
-
-    if (input22.value.toUpperCase() == "FIN") {
-        total = total + 1;
-        input22.style.background = "green";
-    }
-    else {
-        input22.style.background = "red";
-    }
+    total = verifinputupper(input17, "VAR", total);
+    total = verifinputupper(input18, "CHAINE", total);
+    total = verifinputlower(input19, "couleur", total);
+    total = verifinputupper(input20, "PARMI", total);
+    total = verifinputupper(input21, "DEFAUT", total);
+    total = verifinputupper(input22, "FIN", total);
 
     if (total != 6) {
         total = 0;
@@ -341,56 +208,13 @@ let input28 = document.querySelector("#input28");
 
 verif5.addEventListener("click", () => {
     total = 0;
-
-    if (input23.value.toLowerCase() == "i") {
-        total = total + 1;
-        input23.style.background = "green";
-    }
-    else {
-        input23.style.background = "red";
-    }
-
-    if (input24.value.toUpperCase() == "DEBUT") {
-        total = total + 1;
-        input24.style.background = "green";
-    }
-    else {
-        input24.style.background = "red";
-    }
-
-    if (input25.value.toUpperCase() == "DE") {
-        total = total + 1;
-        input25.style.background = "green";
-    }
-    else {
-        input25.style.background = "red";
-    }
-
-    if (input26.value.toUpperCase() == "FAIRE") {
-        total = total + 1;
-        input26.style.background = "green";
-    }
-    else {
-
-        input26.style.background = "red";
-    }
-
-    if (input27.value.toLowerCase() == "total") {
-        total = total + 1;
-        input27.style.background = "green";
-    }
-    else {
-        input27.style.background = "red";
-    }
-
-    if (input28.value.toUpperCase() == "FINPOUR") {
-        total = total + 1;
-        input28.style.background = "green";
-    }
-    else {
-        input28.style.background = "red";
-    }
-
+    total = verifinputlower(input23, "i", total);
+    total = verifinputupper(input24, "DEBUT", total);
+    total = verifinputupper(input25, "DE", total);
+    total = verifinputupper(input26, "FAIRE", total);
+    total = verifinputlower(input27, "total", total);
+    total = verifinputupper(input28, "FINPOUR", total);
+    
     if (total != 6) {
         total = 0;
     }
@@ -414,72 +238,15 @@ let input36 = document.querySelector("#input36");
 
 verif6.addEventListener("click", () => {
     total = 0;
-
-    if (input29.value.toUpperCase() == "BOOL") {
-        total = total + 1;
-        input29.style.background = "green";
-    }
-    else {
-        input29.style.background = "red";
-    }
-
-    if (input30.value.toUpperCase() == "TANTQUE") {
-        total = total + 1;
-        input30.style.background = "green";
-    }
-    else {
-        input30.style.background = "red";
-    }
-
-    if (input31.value.toLowerCase() == "win") {
-        total = total + 1;
-        input31.style.background = "green";
-    }
-    else {
-        input31.style.background = "red";
-    }
-
-    if (input32.value.toUpperCase() == "SI") {
-        total = total + 1;
-        input32.style.background = "green";
-    }
-    else {
-
-        input32.style.background = "red";
-    }
-
-    if (input33.value.toUpperCase() == "ALORS") {
-        total = total + 1;
-        input33.style.background = "green";
-    }
-    else {
-        input33.style.background = "red";
-    }
-
-    if (input34.value.toLowerCase() == "vrai") {
-        total = total + 1;
-        input34.style.background = "green";
-    }
-    else {
-        input34.style.background = "red";
-    }
-
-    if (input35.value.toUpperCase() == "SINON") {
-        total = total + 1;
-        input35.style.background = "green";
-    }
-    else {
-        input35.style.background = "red";
-    }
-
-    if (input36.value.toUpperCase() == "FINTANTQUE") {
-        total = total + 1;
-        input36.style.background = "green";
-    }
-    else {
-        input36.style.background = "red";
-    }
-
+    total = verifinputupper(input29, "BOOL", total);
+    total = verifinputupper(input30, "TANTQUE", total);
+    total = verifinputlower(input31, "win", total);
+    total = verifinputupper(input32, "SI", total);
+    total = verifinputupper(input33, "ALORS", total);
+    total = verifinputlower(input34, "vrai", total);
+    total = verifinputupper(input35, "SINON", total);
+    total = verifinputupper(input36, "FINTANTQUE", total);
+    
     if (total != 8) {
         total = 0;
     }
@@ -502,64 +269,14 @@ let input43 = document.querySelector("#input43");
 
 verif7.addEventListener("click", () => {
     total = 0;
-
-    if (input37.value.toUpperCase() == "ENTIER") {
-        total = total + 1;
-        input37.style.background = "green";
-    }
-    else {
-        input37.style.background = "red";
-    }
-
-    if (input38.value.toUpperCase() == "POUR") {
-        total = total + 1;
-        input38.style.background = "green";
-    }
-    else {
-        input38.style.background = "red";
-    }
-
-    if (input39.value.toUpperCase() == "A") {
-        total = total + 1;
-        input39.style.background = "green";
-    }
-    else {
-        input39.style.background = "red";
-    }
-
-    if (input40.value.toUpperCase() == "DE") {
-        total = total + 1;
-        input40.style.background = "green";
-    }
-    else {
-
-        input40.style.background = "red";
-    }
-
-    if (input41.value.toUpperCase() == "FAIRE") {
-        total = total + 1;
-        input41.style.background = "green";
-    }
-    else {
-        input41.style.background = "red";
-    }
-
-    if (input42.value.toLowerCase() == "map") {
-        total = total + 1;
-        input42.style.background = "green";
-    }
-    else {
-        input42.style.background = "red";
-    }
-
-    if (input43.value.toUpperCase() == "FINPOUR") {
-        total = total + 1;
-        input43.style.background = "green";
-    }
-    else {
-        input43.style.background = "red";
-    }
-
+    total = verifinputupper(input37, "ENTIER", total);
+    total = verifinputupper(input38, "POUR", total);
+    total = verifinputupper(input39, "A", total);
+    total = verifinputupper(input40, "DE", total);
+    total = verifinputupper(input41, "FAIRE", total);
+    total = verifinputlower(input42, "map", total);
+    total = verifinputupper(input43, "FINPOUR", total);
+   
     if (total != 7) {
         total = 0;
     }
@@ -586,88 +303,17 @@ let planquer = document.querySelector(".planquer");
 
 verif8.addEventListener("click", () => {
     total = 0;
-
-    if (input44.value.toUpperCase() == "TABLEAU") {
-        total = total + 1;
-        input44.style.background = "green";
-    }
-    else {
-        input44.style.background = "red";
-    }
-
-    if (input45.value.toUpperCase() == "POUR") {
-        total = total + 1;
-        input45.style.background = "green";
-    }
-    else {
-        input45.style.background = "red";
-    }
-
-    if (input46.value.toUpperCase() == "DE") {
-        total = total + 1;
-        input46.style.background = "green";
-    }
-    else {
-        input46.style.background = "red";
-    }
-
-    if (input47.value.toUpperCase() == "A") {
-        total = total + 1;
-        input47.style.background = "green";
-    }
-    else {
-        input47.style.background = "red";
-    }
-
-    if (input48.value.toUpperCase() == "FAIRE") {
-        total = total + 1;
-        input48.style.background = "green";
-    }
-    else {
-
-        input48.style.background = "red";
-    }
-
-    if (input49.value.toUpperCase() == "POUR") {
-        total = total + 1;
-        input49.style.background = "green";
-    }
-    else {
-        input49.style.background = "red";
-    }
-
-    if (input50.value.toUpperCase() == "DE") {
-        total = total + 1;
-        input50.style.background = "green";
-    }
-    else {
-        input50.style.background = "red";
-    }
-
-    if (input51.value.toUpperCase() == "A") {
-        total = total + 1;
-        input51.style.background = "green";
-    }
-    else {
-        input51.style.background = "red";
-    }
-
-    if (input52.value.toUpperCase() == "FAIRE") {
-        total = total + 1;
-        input52.style.background = "green";
-    }
-    else {
-        input52.style.background = "red";
-    }
-
-    if (input53.value.toUpperCase() == "ECRIREALALIGNE") {
-        total = total + 1;
-        input53.style.background = "green";
-    }
-    else {
-        input53.style.background = "red";
-    }
-
+    total = verifinputupper(input44, "TABLEAU", total);
+    total = verifinputupper(input45, "POUR", total);
+    total = verifinputupper(input46, "DE", total);
+    total = verifinputupper(input47, "A", total);
+    total = verifinputupper(input48, "FAIRE", total);
+    total = verifinputupper(input49, "POUR", total);
+    total = verifinputupper(input50, "DE", total);
+    total = verifinputupper(input51, "A", total);
+    total = verifinputupper(input52, "FAIRE", total);
+    total = verifinputupper(input53, "ECRIREALALIGNE", total);
+    
     if (total != 10) {
         total = 0;
     }
@@ -679,7 +325,173 @@ verif8.addEventListener("click", () => {
     appearnextbutton();
 })
 
-var partie = 0;
+//Creation du serpent et intégration dans la map
+let verif9 = document.querySelector("#Validation9");
+let input54 = document.querySelector("#input54");
+let input55 = document.querySelector("#input55");
+let input56 = document.querySelector("#input56");
+let input57 = document.querySelector("#input57");
+let input58 = document.querySelector("#input58");
+let input59 = document.querySelector("#input59");
+let input60 = document.querySelector("#input60");
+
+verif9.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input54, "CAR", total);
+    total = verifinputupper(input55, "TANTQUE", total);
+    total = verifinputupper(input56, "ALORS", total);
+    total = verifinputupper(input57, "FINTANTQUE", total);
+    total = verifinputupper(input58, "TANTQUE", total);
+    total = verifinputupper(input59, "ALORS", total);
+    total = verifinputupper(input60, "FINTANTQUE", total);
+    
+    if (total != 7) {
+        total = 0;
+    }
+    else {
+        succeslevel = 15;
+        partie = 1;
+    }
+    console.log(total);
+    appearnextbutton();
+})
+
+//Mouvement
+let verif10 = document.querySelector("#Validation10");
+let input61 = document.querySelector("#input61");
+let input62 = document.querySelector("#input62");
+let input63 = document.querySelector("#input63");
+let input64 = document.querySelector("#input64");
+let input65 = document.querySelector("#input65");
+let input66 = document.querySelector("#input66");
+
+verif10.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input61, "CAS", total);
+    total = verifinputupper(input62, "PARMI", total);
+    total = verifinputupper(input63, "FINCASPARMI", total);
+    total = verifinputupper(input64, "TANTQUE", total);
+    total = verifinputlower(input65, "direction_y", total);
+    total = verifinputupper(input66, "FINTANTQUE", total);
+    
+    if (total != 6) {
+        total = 0;
+    }
+    else {
+        succeslevel = 16;
+        partie = 2;
+    }
+    console.log(total);
+    appearnextbutton();
+})
+
+//teleportation
+let verif11 = document.querySelector("#Validation11");
+let input67 = document.querySelector("#input67");
+let input68 = document.querySelector("#input68");
+let input69 = document.querySelector("#input69");
+let input70 = document.querySelector("#input70");
+let input71 = document.querySelector("#input71");
+
+verif11.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input67, "CONST", total);
+    total = verifinputupper(input68, "HAUTEUR", total);
+    total = verifinputupper(input69, "ALORS", total);
+    total = verifinputlower(input70, "serpent.posy", total);
+    total = verifinputupper(input71, "FINSI", total);
+    
+    if (total != 5) {
+        total = 0;
+    }
+    else {
+        succeslevel = 17;
+        partie = 3;
+    }
+    console.log(total);
+    appearnextbutton();
+})
+
+//apparition nourriture
+let verif12 = document.querySelector("#Validation12");
+let input72 = document.querySelector("#input72");
+let input73 = document.querySelector("#input73");
+let input74 = document.querySelector("#input74");
+let input75 = document.querySelector("#input75");
+let input76 = document.querySelector("#input76");
+
+verif12.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input72, "CLASSE", total);
+    total = verifinputupper(input73, "ALEA", total);
+    total = verifinputupper(input74, "ALEA", total);
+    total = verifinputlower(input75, "map", total);
+    total = verifinputupper(input76, "FIN", total);
+    
+    if (total != 5) {
+        total = 0;
+    }
+    else {
+        succeslevel = 18;
+        partie = 4;
+    }
+    console.log(total);
+    appearnextbutton();
+})
+
+let verif13 = document.querySelector("#Validation13");
+let input77 = document.querySelector("#input77");
+let input78 = document.querySelector("#input78");
+let input79 = document.querySelector("#input79");
+let input80 = document.querySelector("#input80");
+let input81 = document.querySelector("#input81");
+
+verif13.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input77, "SI", total);
+    total = verifinputupper(input78, "ALORS", total);
+    total = verifinputupper(input79, "ALEA", total);
+    total = verifinputupper(input80, "ALEA", total);
+    total = verifinputupper(input81, "FINSI", total);
+    
+    if (total != 5) {
+        total = 0;
+    }
+    else {
+        succeslevel = 19;
+        partie = 5;
+    }
+    console.log(total);
+    appearnextbutton();
+})
+
+let verif14 = document.querySelector("#Validation14");
+let input82 = document.querySelector("#input82");
+let input83 = document.querySelector("#input83");
+let input84 = document.querySelector("#input84");
+let input85 = document.querySelector("#input85");
+let input86 = document.querySelector("#input86");
+let input87 = document.querySelector("#input87");
+
+verif14.addEventListener("click", () => {
+    total = 0;
+    total = verifinputupper(input82, "POUR", total);
+    total = verifinputupper(input83, "A", total);
+    total = verifinputupper(input84, "SI", total);
+    total = verifinputupper(input85, "ALORS", total);
+    total = verifinputupper(input86, "FINSI", total);
+    total = verifinputupper(input87, "FINPOUR", total);
+    
+    if (total != 6) {
+        total = 0;
+    }
+    else {
+        succeslevel = 20;
+        partie = 6;
+    }
+    console.log(total);
+    appearnextbutton();
+})
 
 //Le snake
 var w = 500;
@@ -688,11 +500,11 @@ var n = 50;
 var s = w / n;
 var player = {
     parts: [
-        { X: 1, Y: 0 },
-        { X: 0, Y: 0 }
+        { X: 25, Y: 25 }
     ]
 }
 var fps = 10;
+var partie = 0;
 var pb = 1;
 var min = 0;
 var max = n - 1;
@@ -710,7 +522,6 @@ var speed = {
     Y: 0
 }
 setRate(1000);
-//setInterval(update,1000/fps);
 //QUEL DIRECTION?
 document.addEventListener("keydown", f_keydown)
 function f_keydown(e) {
